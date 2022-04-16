@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active, a:hover, a:visited, a:focus {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.active {
+    color: #F57C37;
+    font-weight: bold;
+}
+/* header styles */
+header#navArea {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.is-sticky {
+    padding: 0px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background: #fff;
+    transition: background 0.5s;
+}
+
+header#navArea div img {
+    width: 200px;
+    height: 100px;
+}
+
+header#navArea div#links {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+header#navArea div#links a{
+    font-weight: 500;
+    color: #000;
+}
+
+header#navArea div.menuList {
+    display: none;
+}
+header#navArea button.bugger {
+    display: none;
+}
+
+/* first section */
+
+main section#intro {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+    padding-top: 140px;
+    transition: all .5s;
+}
+section#intro div#content{
+    width: 70%;
+}
+section#intro div#content h1{
+    font-weight: bold;
+    font-size: 39px;
+    margin-bottom: 20px;
+}
+
+section#intro div#content p{
+    font-weight: 300;
+    font-size: 25px;
+    box-sizing: border-box;
+    min-width: 0;
+    width: 65%;
+    margin-bottom: 20px;
+}
+section#intro div#content a{
+    background: #551D5A;
+    font-weight: 400;
+    font-size: 24px;
+    width: 100px;
+    padding: 10px;
+    height: 50px;
+    color: #fff;
+    border-radius: 10px 10px 10px 0px;
+    margin-right: 30px;
+}
+
+section#intro div img {
+    width: 500px;
+}
+
+/* second section */
+section#Tokenomics {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 300px;
+}
+
+section#Tokenomics h3{
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+section#Tokenomics h2{
+    font-weight: bold;
+    font-size: 28px;
+}
+section#Tokenomics div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+section#Tokenomics div img {
+    background-image: linear-gradient(320.89deg,#25D9D9 10.83%,rgba(37,217,217,0.5) 88.7%);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+section#Tokenomics div p {
+    font-size: 20px;
+    width: 60%;
+    text-align: center;
+}
+
+/* third section */
+section#roadmap {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding-top: 200px;
+}
+
+section#roadmap div#to-left {
+    margin-right: 200px;
+}
+
+section#roadmap div img {
+    width: 500px;
+}
+
+section#roadmap div#to-right h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #02073E;
+}
+
+section#roadmap div#to-right p{
+    color: #7a7979;
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+section#roadmap div#to-right ul {
+    padding: 10px;
+}
+section#roadmap div#to-right ul li {
+    padding: 10px;
+    display: flex;
+    font-size: 20px;
+}
+section#roadmap div#to-right ul li p{
+    color: #000;
+    font-size: 20px;
+}
+section#roadmap div#to-right ul li:nth-child(2) ul {
+    align-self: flex-start;
+}
+
+/* fourth section */
+section#announcement {
+    height: 100vh;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#announcement h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+section#announcement p{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #7a7979;
+}
+section#announcement a{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #02073E;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+section#announcement img {
+    width: 400px
+}
+
+
+/* footer */
+footer {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer img {
+    width: 200px;
+}
+
+@media  screen and (max-width: 900px) {
+    header#navArea button#burger {
+        display: flex;
+        flex-direction: column;
+        background: none;
+        outline: none;
+        border: none;
+        
+    }
+    header#navArea button#burger div{
+        background-color: #551D5A;
+        width: 40px;
+        height: 2px;
+        margin-bottom: 4px;
+
+    }
+    header#navArea div.menuList {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        background-color: #fff;
+        height: 100%;
+        z-index: 1;
+        bottom: 0;
+        width: 50%;
+        left: 0;
+        gap: 80px;
+        padding: 60px 20px;
+        box-shadow: 5px 5px 50px 4px #000;
+        transform: translateX(-300px);
+     
+    }
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-300px);
+            display: flex;
+        };
+        25% {
+            transform: translateX(-200px);
+            display: flex;
+        };
+        50% {
+            transform: translateX(-100px);
+            display: flex;
+        };
+        75% {
+            transform: translateX(-50px);
+            display: flex;
+        }
+        100% {
+            transform: translateX(0px);
+            display: flex;
+        }
+    }
+    @keyframes slideOut {
+        0% {
+            transform: translateX(0px);
+            display: none;
+        };
+        25% {
+            transform: translateX(-50px);
+        };
+        50% {
+            transform: translateX(-100px);
+        };
+        75% {
+            transform: translateX(-200px);
+        }
+        100% {
+            transform: translateX(-300px);
+        }
+    }
+    .slideIn {
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation: translateX 2s (num * 60ms) ease-in-out forwards;
+        display: flex;
+    }
+    .slideOut {
+        animation-name: slideIn;
+        animation-duration: 2s;
+    }
+    header#navArea div.menuList a {
+        color: #000;
+    }
+    header#navArea div#links {
+        display: none;
+    }
+    main section#intro {
+     
+        flex-direction: column;
+        align-items: left;
+        
+    }
+    section#intro div#content {
+        align-items: left;
+        width: 100%;
+    }
+    section#intro div#content p {
+        width: 100%;
+        font-size: 18px;
+    }
+    section#intro div#content h1 {
+        font-size: 20px;
+    }
+    section#intro div#content a{
+        background: #551D5A;
+        font-weight: 400;
+        font-size: 16px;
+        width: 80px;
+        padding: 10px;
+        height: 50px;
+        color: #fff;
+        border-radius: 10px 10px 10px 0px;
+        margin-right: 30px;
+    }
+    
+    section#intro div img {
+        width: 300px;
+    }
+
+        /* third section */
+    section#roadmap {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 200px;
+        padding: 20px;
+        align-items: center;
+    }
+
+    section#roadmap div#to-left {
+        margin-right: 0px;
+    }
+
+    section#roadmap div img {
+        width: 300px;
+    }
+
+
+    section#roadmap div#to-right h2{
+        font-size: 30px;
+        margin-bottom: 10px;
+        color: #02073E;
+        text-align: center;
+    }
+
+    section#roadmap div#to-right p{
+        color: #7a7979;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    section#roadmap div#to-right ul {
+        padding: 10px;
+    }
+    section#roadmap div#to-right ul li {
+        padding: 10px;
+        display: flex;
+        font-size: 16px;
+    }
+    section#roadmap div#to-right ul li p{
+        color: #000;
+    }
+    section#roadmap div#to-right ul li:nth-child(2) ul {
+        align-self: flex-start;
+    }
+        /* second section */
+    section#Tokenomics {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    section#Tokenomics h3{
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    section#Tokenomics h2{
+        font-weight: bold;
+        font-size: 28px;
+    }
+    section#Tokenomics div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    section#Tokenomics div img {
+        background-image: linear-gradient(320.89deg,#25D9D9 10.83%,rgba(37,217,217,0.5) 88.7%);
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 14px;
+    }
+
+    section#Tokenomics div p {
+        font-size: 20px;
+        width: 60%;
+        text-align: center;
+    }
+
+        /* fourth section */
+    section#announcement {
+        height: 100%;
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    section#announcement h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    section#announcement p{
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #7a7979;
+        text-align: center;
+    }
+    section#announcement a{
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #02073E;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+
+    section#announcement img {
+        width: 300px
+    }
+
+
+}
+
