@@ -54,6 +54,7 @@ header#navArea div#links {
 header#navArea div#links a{
     font-weight: 500;
     color: #000;
+    padding: 10px;
 }
 
 header#navArea div.menuList {
@@ -62,7 +63,12 @@ header#navArea div.menuList {
 header#navArea button.bugger {
     display: none;
 }
-
+header#navArea div#links a.Buy {
+    background-color: #551D5A;
+    align-self: center;
+    color: #fff;
+    border-radius: 10px 10px 10px 0px;
+}
 /* first section */
 
 main section#intro {
@@ -251,7 +257,7 @@ footer img {
 
     }
     header#navArea div.menuList {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: fixed;
         background-color: #fff;
@@ -263,8 +269,21 @@ footer img {
         gap: 80px;
         padding: 60px 20px;
         box-shadow: 5px 5px 50px 4px #000;
-        transform: translateX(-300px);
+        /* transform: translateX(-300px); */
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation: translateX 2s (num * 60ms) ease-in-out forwards;
      
+    }
+    header#navArea div.menuList a.Buy {
+        background-color: #551D5A;
+        color: #fff;
+        border-radius: 10px 10px 10px 0px;
+        padding: 20px;
+        display: flex;
+    }
+    header#navArea div.menuList a.Buy p {
+        align-self: center;
     }
     @keyframes slideIn {
         0% {
@@ -313,7 +332,7 @@ footer img {
         display: flex;
     }
     .slideOut {
-        animation-name: slideIn;
+        animation-name: slideOut;
         animation-duration: 2s;
     }
     header#navArea div.menuList a {

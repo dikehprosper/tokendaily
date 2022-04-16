@@ -9,9 +9,17 @@ window.addEventListener("scroll", function() {
     }
 });
 window.addEventListener("click", function() {
-    return menu.classList.add("slideOut")
+    return menu.classList.remove("slideIn")
 });
 
-function openMenu ()  {
-    return menu.classList.add("slideIn")
+function openMenu (e)  {
+   
+        if(menu.style.display == "none"){
+            menu.style.display = "flex";
+        }
+        else{
+            menu.style.display = "none";
+            menu.classList.add('slideOut')
+        }
+        e.preventDefault()
 }
